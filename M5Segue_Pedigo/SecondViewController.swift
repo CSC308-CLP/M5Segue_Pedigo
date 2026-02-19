@@ -9,10 +9,26 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    
+    var receivedTitle: String = "Second Page"
+    var receivedName: String = "Unknown"
+    
+    @IBAction func imageButton(_ sender: Any) {
+        backgroundImageView.image = UIImage(named: "background.jpg")
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        titleLabel.text = receivedTitle
+        nameLabel.text = receivedName
+        
     }
     
 
